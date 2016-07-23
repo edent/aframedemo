@@ -10,12 +10,14 @@
 
     <a-scene>
       <a-assets>
-        <img id="texture" src="img/dali1.png" crossorigin="">
+        <img id="texture" src="img/dali1.png" crossorigin="anonymous">
      </a-assets>
+     <a-entity camera look-controls wasd-controls></a-entity>
+
      <a-box src="#texture" position="1 1 1" color="#ffffff"></a-box>
 
-      <!-- <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
-      <!-- <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"></a-entity> -->
+      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
+      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"></a-entity>
 
       <a-cube position="0 0 0" rotation="0 0 0" width="1" height="1" depth="5" color="#4CC3D9"></a-cube>
       <a-cube position="0 2 0" rotation="0 0 0" width="1" height="1" depth="3"  material="src: url(img/dali1.jpg)"></a-cube>
