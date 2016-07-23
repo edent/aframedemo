@@ -10,22 +10,87 @@
 
     <a-scene>
       <a-assets>
-        <img id="texture" src="img/dali1.png" crossorigin="anonymous">
-     </a-assets>
-     <a-entity camera look-controls wasd-controls></a-entity>
+        <img id="texture" src="/img/dali1.png" crossorigin="anonymous">
+        <img id="floor" src="/img/floor.jpg" crossorigin="anonymous">
+        <a-asset-item id="nandi-obj" src="/obj/nandi.obj"></a-asset-item>
+        <a-asset-item id="nandi-mtl" src="/obj/nandi.mtl"></a-asset-item>
+        <a-asset-item id="greekHead-obj" src="/obj/greekHead.obj"></a-asset-item>
+        <a-asset-item id="greekHead-mtl" src="/obj/greekHead.mtl"></a-asset-item>
+        <a-asset-item id="angel-mtl" src="/obj/angel-decimated.mtl"></a-asset-item>
+        <a-asset-item id="angel-obj" src="/obj/angel-decimated.obj"></a-asset-item>
+        <a-asset-item id="statue-mtl" src="/obj/statue-decimated.mtl"></a-asset-item>
+        <a-asset-item id="statue-obj" src="/obj/statue-decimated.obj"></a-asset-item>
+        <a-asset-item id="david-mtl" src="/obj/david-decimated.mtl"></a-asset-item>
+        <a-asset-item id="david-obj" src="/obj/david-decimated.obj"></a-asset-item>
+      </a-assets>
 
-     <a-box src="#texture" position="1 1 1" color="#ffffff"></a-box>
+      <a-sky src="/img/sky.jpg" radius="1200"></a-sky>
 
-      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
-      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"></a-entity>
+      <a-entity
+         obj-model="obj: #nandi-obj; mtl: #nandi-mtl"
+         scale="0.05 0.05 0.05"
+         rotation="0 00 170"
+         position="0 2 1"></a-entity>
 
-      <a-cube position="0 0 0" rotation="0 0 0" width="1" height="1" depth="5" color="#4CC3D9"></a-cube>
-      <a-cube position="0 2 0" rotation="0 0 0" width="1" height="1" depth="3"  material="src: url(img/dali1.jpg)"></a-cube>
-      <a-cube position="2 0 0" rotation="1 0 0" width="1" height="1" depth="3"  material="src: url(img/dali1.jpg)"</a-cube>
+      <a-entity
+         obj-model="obj: #greekHead-obj; mtl: #greekHead-mtl"
+         scale="0.1 0.1 0.1"
+         rotation="0 0 0"
+         position="5 2 5">
+         <a-animation
+            attribute="position"
+            dur="10000"
+            from="5 2 5"
+            to="5 4 5"
+            direction="alternate"
+            repeat="indefinite"></a-animation>
 
-      <!-- <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
-      <a-plane rotation="-90 0 0" width="14" height="14" color="green"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      </a-entity>
+
+      <a-cube position="4 0 5" rotation="1 0 0" width="1" height="2" depth="1" color="red"</a-cube>
+
+
+      <a-entity
+         obj-model="obj: #david-obj; mtl: #david-mtl;"
+         scale="1 1 1"
+         rotation="0 0 0"
+         position="2 0 2"
+         look-at="[camera]"></a-entity>
+
+
+      <a-entity
+         obj-model="obj: #angel-obj; mtl: #angel-mtl;"
+         scale="1 1 1"
+         rotation="0 0 0"
+         position="3 0 3"
+         look-at="[camera]">
+         <a-animation
+            attribute="position"
+            dur="10000"
+            from="3 0 3"
+            to="3 0 13"
+            direction="alternate"
+            repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-entity camera look-controls wasd-controls position="1 1 1"></a-entity>
+
+      <a-box src="#texture" position="1 1 1" color="#ffffff"></a-box>
+
+      <!-- <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"></a-entity> -->
+      <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+                position="0 10 10"></a-entity>
+
+       <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+                 position="5 10 -13"></a-entity>
+
+      <!-- <a-plane rotation="-90 0 0" width="24" height="24" src="#floor"></a-plane> -->
+      <a-entity geometry="primitive: plane; height: 500; width: 500"
+          position="0 -0.5 0"
+          rotation="-90 0 0"
+          material="shader: flat; src: url(img/floor.jpg); repeat: 300 300"></a-entity>
+
+      <!-- <a-sky color="#0000ab"></a-sky> -->
     </a-scene>
   </body>
 </html>
