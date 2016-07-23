@@ -1,17 +1,11 @@
-newmtl Solid
-Ka  1.0 1.0 1.0
-Kd  1.0 1.0 1.0
-Ks  0.0 0.0 0.0
-d  1.0
-Ns  0.0
-illum 0
+# Blender MTL File: 'None'
+# Material Count: 1
 
-newmtl greekHead
-Ka  1.0 1.0 1.0
-Kd  1.0 1.0 1.0
-Ks  0.0 0.0 0.0
-d  1.0
-Ns  0.0
-illum 0
-map_Kd greekHead.jpg
-
+newmtl material_0
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2

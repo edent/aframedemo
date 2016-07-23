@@ -12,8 +12,8 @@
       <a-assets>
         <img id="texture" src="/img/dali1.png" crossorigin="anonymous">
         <img id="floor" src="/img/floor.jpg" crossorigin="anonymous">
-        <a-asset-item id="nandi-obj" src="/obj/nandi.obj"></a-asset-item>
-        <a-asset-item id="nandi-mtl" src="/obj/nandi.mtl"></a-asset-item>
+        <a-asset-item id="nandi-obj" src="/obj/bull.obj"></a-asset-item>
+        <a-asset-item id="nandi-mtl" src="/obj/bull.mtl"></a-asset-item>
         <a-asset-item id="greekHead-obj" src="/obj/greekHead.obj"></a-asset-item>
         <a-asset-item id="greekHead-mtl" src="/obj/greekHead.mtl"></a-asset-item>
         <a-asset-item id="angel-mtl" src="/obj/angel-decimated.mtl"></a-asset-item>
@@ -28,20 +28,20 @@
 
       <a-entity
          obj-model="obj: #nandi-obj; mtl: #nandi-mtl"
-         scale="0.05 0.05 0.05"
-         rotation="0 00 170"
-         position="0 2 1"></a-entity>
+         scale="1 1 1"
+         rotation="0 0 0"
+         position="0 -0.3 1"></a-entity>
 
       <a-entity
          obj-model="obj: #greekHead-obj; mtl: #greekHead-mtl"
-         scale="0.1 0.1 0.1"
+         scale="1 1 1"
          rotation="0 0 0"
-         position="5 2 5">
+         position="3.5 0.5 4.5">
          <a-animation
             attribute="position"
-            dur="10000"
-            from="5 2 5"
-            to="5 4 5"
+            dur="5000"
+            from="3.5 0.5 4.5"
+            to="3.5 4 4.5"
             direction="alternate"
             repeat="indefinite"></a-animation>
 
