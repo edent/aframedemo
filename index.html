@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! • A-Frame</title>
-    <meta name="description" content="Hello, World! • A-Frame">
+    <title>@edent Demo • A-Frame</title>
+    <meta name="description" content="@edent Demo • A-Frame">
     <script src="aframe.min.js"></script>
   </head>
   <body>
@@ -18,8 +18,6 @@
         <a-asset-item id="greekHead-mtl" src="obj/greekHead.mtl"></a-asset-item>
         <a-asset-item id="angel-mtl" src="obj/angel-decimated.mtl"></a-asset-item>
         <a-asset-item id="angel-obj" src="obj/angel-decimated.obj"></a-asset-item>
-        <a-asset-item id="statue-mtl" src="obj/statue-decimated.mtl"></a-asset-item>
-        <a-asset-item id="statue-obj" src="obj/statue-decimated.obj"></a-asset-item>
         <a-asset-item id="david-mtl" src="obj/david-decimated.mtl"></a-asset-item>
         <a-asset-item id="david-obj" src="obj/david-decimated.obj"></a-asset-item>
       </a-assets>
@@ -54,8 +52,7 @@
          obj-model="obj: #david-obj; mtl: #david-mtl;"
          scale="1 1 1"
          rotation="0 0 0"
-         position="2 0 2"
-         look-at="[camera]"></a-entity>
+         position="2 -0.5 2"></a-entity>
 
 
       <a-entity
@@ -73,24 +70,21 @@
             repeat="indefinite"></a-animation>
       </a-entity>
 
-      <a-entity camera look-controls wasd-controls position="1 1 1"></a-entity>
+      <a-entity camera look-controls wasd-controls position="-2 1 4"></a-entity>
 
       <a-box src="#texture" position="1 1 1" color="#ffffff"></a-box>
 
-      <!-- <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"></a-entity> -->
       <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
                 position="0 10 10"></a-entity>
 
        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
                  position="5 10 -13"></a-entity>
 
-      <!-- <a-plane rotation="-90 0 0" width="24" height="24" src="#floor"></a-plane> -->
       <a-entity geometry="primitive: plane; height: 500; width: 500"
           position="0 -0.5 0"
           rotation="-90 0 0"
           material="shader: flat; src: url(img/floor.jpg); repeat: 300 300"></a-entity>
 
-      <!-- <a-sky color="#0000ab"></a-sky> -->
     </a-scene>
   </body>
 </html>
